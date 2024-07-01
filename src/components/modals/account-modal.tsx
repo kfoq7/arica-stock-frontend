@@ -61,10 +61,10 @@ export const AccountModal = () => {
 
               <div className="flex flex-col items-center justify-center gap-y-2 pt-3">
                 <div className="size-16 rounded-md bg-[#e6acac] p-4 text-center text-4xl">
-                  F
+                  J
                 </div>
                 <span className="flex flex-col justify-center text-2xl font-semibold tracking-tighter">
-                  Fabrizio
+                  Juan
                 </span>
               </div>
 

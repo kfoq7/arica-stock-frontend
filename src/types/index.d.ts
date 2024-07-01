@@ -14,18 +14,20 @@ interface Producto {
 }
 
 interface DetalleVenta {
-  id: number
+  // id: number
   cantidad: number
-  precio: string // Changed to string to match the provided JSON
+  precio: number // Changed to string to match the provided JSON
   producto: Producto
 }
 
 interface Venta {
   id: number
   fecha: string // Use string to represent ISO date strings
-  total: string // Changed to string to match the provided JSON
+  total: number // Changed to string to match the provided JSON
   detalleVenta: DetalleVenta[]
 }
+
+type CreateVenta = Omit<Venta, 'id'>
 
 type ApiResponse<T = any> = {
   readonly data: T

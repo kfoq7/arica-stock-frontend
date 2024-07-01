@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { HomeIcon, ShoppingCartIcon } from '@heroicons/react/20/solid'
 import { cn } from '@/lib/utils'
 import { ProfileMenu } from './profile-menu'
+import { ProductsMenu } from './products-menu'
 
 const links = [
   {
@@ -43,6 +44,8 @@ export function Sidebar() {
           </Link>
         ))}
       </nav>
+
+      <ProductsMenu />
     </aside>
   )
 }

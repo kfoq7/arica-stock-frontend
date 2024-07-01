@@ -3,13 +3,11 @@
 import { useProductsList } from '@/hooks/use-products-list'
 
 export function ProductList() {
-  const { data, isLoading, error } = useProductsList()
+  const { data, isLoading } = useProductsList()
 
   if (isLoading) {
     return <div>Loading...</div>
   }
-
-  console.log(data?.data)
 
   return (
     <div className="max-h-[700px] overflow-y-auto">

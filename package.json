@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write src",
-    "format:check": "prettier --check src"
+    "format:check": "prettier --check src",
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.1",
@@ -17,7 +18,8 @@
     "axios": "^1.7.2",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-e02baf6c92-20240627",
-    "react-dom": "19.0.0-rc-e02baf6c92-20240627"
+    "react-dom": "19.0.0-rc-e02baf6c92-20240627",
+    "react-select": "^5.8.0"
   },
   "devDependencies": {
     "@types/node": "^20",

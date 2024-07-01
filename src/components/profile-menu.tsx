@@ -10,7 +10,7 @@ import {
   Transition
 } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/16/solid'
-import { AccountModalContext } from './account-modal'
+import { AccountModalContext } from './modals/account-modal'
 
 export function ProfileMenu() {
   const { onClose } = useContext(AccountModalContext)

@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { InfoCard } from '@/components/info-card'
 import { useProductsList } from '@/hooks/use-products-list'
 import { UserIcon } from '@heroicons/react/16/solid'
-import { AccountModalContext } from '@/components/account-modal'
+import { AccountModalContext } from '@/components/modals/account-modal'
 
 export default function Dashboard() {
   const { onClose } = useContext(AccountModalContext)
@@ -15,11 +15,11 @@ export default function Dashboard() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="size-16 rounded-md bg-[#e6acac] p-4 text-center text-4xl">
-            F
+            J
           </div>
           <span className="flex flex-col justify-center text-4xl font-semibold tracking-tighter">
-            Fabrizio
-            <span className="text-xl font-normal text-gray-600">Fabrizio</span>
+            Juan
+            <span className="text-xl font-normal text-gray-600">Juan</span>
           </span>
         </div>
 
@@ -31,15 +31,15 @@ export default function Dashboard() {
           Gestionar cuenta
         </button>
       </div>
-
       <div className="w-full rounded-md bg-[#ebf3ff] px-3 py-5">
         <h2 className="text-xl font-semibold tracking-tighter">
-          Set details now, savetime later
+          Mejora la Eficiencia de tus Ventas
         </h2>
 
-        <p>
-          Fast track filling forms using 1Password to fill your personal
-          andpaymet details.
+        <p className="text-gray-700/80">
+          Optimiza tu proceso de ventas configurando los detalles del producto
+          ahora. Ahorra tiempo y aumenta la productividad automatizando tu flujo
+          de trabajo de ventas.
         </p>
       </div>
 

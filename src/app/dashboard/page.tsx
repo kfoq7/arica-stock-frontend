@@ -5,10 +5,12 @@ import { InfoCard } from '@/components/info-card'
 import { useProductsList } from '@/hooks/use-products-list'
 import { UserIcon } from '@heroicons/react/16/solid'
 import { AccountModalContext } from '@/components/modals/account-modal'
+import { useVentaInfo } from '@/hooks/use-venta-info'
 
 export default function Dashboard() {
   const { onClose } = useContext(AccountModalContext)
   const { data } = useProductsList()
+  const { data: ventaInfoData } = useVentaInfo()
 
   return (
     <div className="w-full space-y-10 p-2">
@@ -49,18 +51,18 @@ export default function Dashboard() {
           value={`${data?.data.length}`}
         />
         <InfoCard
-          title="Total Compras"
-          value="S./2,556.58"
-          className="border-yellow-400"
-        />
-        <InfoCard
           title="Total ventas"
-          value="S./108.50"
+          value={`${ventaInfoData?.data.totalVentas}`}
           className="border-red-400"
         />
         <InfoCard
-          title="Ventas del Día"
-          value="S./108.5"
+          title="Total ventas hoy"
+          value={`${ventaInfoData?.data.totalTodayCount}`}
+          className="border-yellow-400"
+        />
+        <InfoCard
+          title="Ganancia del Día"
+          value={`${ventaInfoData?.data.totalTodayVentas}`}
           className="border-blue-400"
         />
       </div>

@@ -27,6 +27,19 @@ interface Venta {
   detalleVenta: DetalleVenta[]
 }
 
+interface MetodoPago {
+  id: number
+  nombre: string
+  estaActivo: boolean
+}
+
+interface VentasInfo {
+  totalVentas: number
+  totalTodayVentas: number
+  totalTodayCount: number
+  todayVentas: Venta[]
+}
+
 type CreateVenta = Omit<Venta, 'id'>
 
 type ApiResponse<T = any> = {

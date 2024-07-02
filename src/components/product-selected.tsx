@@ -16,7 +16,7 @@ export function ProductSelected() {
         <table className="min-w-full bg-white text-left">
           <thead>
             <tr>
-              <th className="border-b px-4 py-2">ID</th>
+              <th className="border-b-2 border-blue-400/40 px-4 py-2">ID</th>
               <th className="border-b px-4 py-2">Nombre</th>
               <th className="border-b px-4 py-2">Categoría</th>
               <th className="border-b px-4 py-2">Cantidad</th>
@@ -36,31 +36,33 @@ export function ProductSelected() {
                 <td className="border-b px-4 py-2">{cantidad}</td>
                 <td className="border-b px-4 py-2">S/.{producto.precio}</td>
                 <td className="border-b px-4 py-2">S/.{precio}</td>
-                <td className="flex items-center justify-between border-b px-4 py-2">
-                  <div className="flex items-center gap-x-2">
+                <td className="border-b px-4 py-2">
+                  <div className="flex items-center justify-between gap-x-1">
+                    <div className="flex items-center gap-x-2">
+                      <button
+                        className="rounded border border-gray-700/20 px-2 text-lg font-semibold text-gray-700/60 hover:bg-gray-600/10"
+                        onClick={() =>
+                          updateProductQuantity(producto.id, cantidad + 1)
+                        }
+                      >
+                        +
+                      </button>
+                      <button
+                        className="rounded border border-gray-700/20 px-2 text-lg font-semibold text-gray-700/60 hover:bg-gray-600/10"
+                        onClick={() =>
+                          updateProductQuantity(producto.id, cantidad - 1)
+                        }
+                      >
+                        -
+                      </button>
+                    </div>
                     <button
-                      className="rounded bg-green-500 px-2 text-white"
-                      onClick={() =>
-                        updateProductQuantity(producto.id, cantidad + 1)
-                      }
+                      className="rounded px-2 py-1"
+                      onClick={() => removeSelectedProduct(producto)}
                     >
-                      +
-                    </button>
-                    <button
-                      className="rounded bg-yellow-500 px-2 text-white"
-                      onClick={() =>
-                        updateProductQuantity(producto.id, cantidad - 1)
-                      }
-                    >
-                      -
+                      Eliminar
                     </button>
                   </div>
-                  <button
-                    className="rounded bg-red-500 px-2 py-1 text-white"
-                    onClick={() => removeSelectedProduct(producto)}
-                  >
-                    Eliminar
-                  </button>
                 </td>
               </tr>
             ))}
